@@ -16,6 +16,7 @@
 <body>
 <!-- 3478 -->
     <div class="container">
+        <h1 class="text-center">Sitemap Keyword Search</h1>
         <form id="form" action="index.php/search" method="POST">
             <div class="form-group">
                 <input type="text" class="form-control" id="sitemap" name="sitemap" placeholder="Sitemap URL..">
