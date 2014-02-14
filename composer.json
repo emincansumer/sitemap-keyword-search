@@ -1,0 +1,6 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "fabpot/goutte": "1.0.*@dev"
+    }
+}
