@@ -8,7 +8,7 @@
     body {
         padding-top: 20px;
     }
-    #loader {
+    #no-results-found, #loader {
         margin-top: 20px;
     }
     </style>
@@ -32,6 +32,7 @@
                 </div>
             </div>
         </div>
+        <div id="no-results-found" class="alert alert-info hidden">No Results Found</div>
         <ul id="result"></ul>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

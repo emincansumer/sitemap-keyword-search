@@ -29,6 +29,7 @@ function init()
     $('#progress-text').html('');
     $('#result').html('');
     $('#results-header').remove();
+    $('#no-results-found').addClass('hidden');
     urls = [];
 }
 
@@ -36,6 +37,9 @@ function processUrl(url, ind) {
     var keyword = $('#keyword').val();
     if(ind == urls.length){
         hideLoader();
+        if($('#result li').length == 0){
+            $('#no-results-found').removeClass('hidden');
+        }
         return;
     }
     $.post('index.php/process', {url: url, keyword: keyword}, function(data){
