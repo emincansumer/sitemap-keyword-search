@@ -2,6 +2,12 @@ var urls = [];
 $(function(){
     $('#form').submit(function(e){
         e.preventDefault();
+
+        if($('input[name=sitemap]').val() == '' || $('input[name=keyword]').val() == '' ) {
+            alert('Please enter a sitemap and keyword');
+            return false;
+        }
+
         showLoader();
         $this = $(this);
         init();
@@ -11,6 +17,7 @@ $(function(){
             });
             processUrl(urls[0], 0);  
         }, 'json');
+
     })
 });
 
