@@ -28,6 +28,7 @@ function init()
 {
     $('#progress-text').html('');
     $('#result').html('');
+    $('#results-header').remove();
     urls = [];
 }
 
@@ -39,6 +40,10 @@ function processUrl(url, ind) {
     }
     $.post('index.php/process', {url: url, keyword: keyword}, function(data){
         if(data == 1) {
+            if(!$('#result').hasClass('processing')){
+                $('#result').addClass('processing');
+                $('#result').before('<h3 id="results-header">Results found</h3>');
+            }
             $('#result').prepend('<li><a href="'+url+'" target="_blank" class="text-danger">'+url+'</a></li>');
         }
         $('#progress-text').html( (ind+1) + ' of ' + urls.length + ' processed' );

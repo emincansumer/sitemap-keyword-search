@@ -14,7 +14,6 @@
     </style>
 </head>
 <body>
-<!-- 3478 -->
     <div class="container">
         <h1 class="text-center">Sitemap Keyword Search</h1>
         <form id="form" action="index.php/search" method="POST">
